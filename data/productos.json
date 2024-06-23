@@ -12,5 +12,26 @@
         "descripcion": "Mouse Logitech",
         "precio": 50.0,
         "stock": 100
+    },
+    {
+        "id_producto": 6,
+        "nombre": "Agua",
+        "descripcion": "San Luis",
+        "precio": 1.2,
+        "stock": 12
+    },
+    {
+        "id_producto": 9,
+        "nombre": "Agua",
+        "descripcion": "San pedrito",
+        "precio": 1.5,
+        "stock": 5
+    },
+    {
+        "id_producto": 7,
+        "nombre": "Pan",
+        "descripcion": "Trigo",
+        "precio": 3.0,
+        "stock": 78
     }
 ]

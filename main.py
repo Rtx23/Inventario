@@ -38,7 +38,7 @@ def menu_principal():
 
 def menu_entidad(tipo_entidad, clase_entidad):
     datos = read_data_json(file_paths[tipo_entidad], clase_entidad)
-
+    
     while True:
         print(f"\nMenú de {tipo_entidad.capitalize()}")
         print("1. Listar")
@@ -145,23 +145,6 @@ def agregar_entidad(entidades, clase_entidad):
     print(f"{clase_entidad.__name__} agregado exitosamente.")
 
 
-
-def eliminar_entidad(entidades, clase_entidad):
-    id_entidad = int(input(f"ID del {clase_entidad.__name__.lower()} a eliminar: "))
-    if clase_entidad == Producto:
-        entidades = [e for e in entidades if not (isinstance(e, Producto) and e.id_producto == id_entidad)]
-    elif clase_entidad == Proveedor:
-        entidades = [e for e in entidades if not (isinstance(e, Proveedor) and e.id_proveedor == id_entidad)]
-    elif clase_entidad == Cliente:
-        entidades = [e for e in entidades if not (isinstance(e, Cliente) and e.id_cliente == id_entidad)]
-    elif clase_entidad == Orden:
-        entidades = [e for e in entidades if not (isinstance(e, Orden) and e.id_orden == id_entidad)]
-    else:
-        print("Clase de entidad no válida.")
-
-    write_data_json(file_paths[clase_entidad.__name__.lower() + 's'], entidades)
-    print(f"{clase_entidad.__name__} eliminado exitosamente.")
-
 def actualizar_entidad(entidades, clase_entidad):
     if clase_entidad == Producto:
         id_entidad = int(input("ID del producto a actualizar: "))
@@ -213,6 +196,24 @@ def actualizar_entidad(entidades, clase_entidad):
         print("Clase de entidad no válida.")
 
     write_data_json(file_paths[clase_entidad.__name__.lower() + 's'], entidades)
+
+def eliminar_entidad(entidades, clase_entidad):
+    id_entidad = int(input(f"ID del {clase_entidad.__name__.lower()} a eliminar: "))
+
+    if clase_entidad == Producto:
+        entidades = [e for e in entidades if not (isinstance(e, Producto) and e.id_producto == id_entidad)]
+    elif clase_entidad == Proveedor:
+        entidades = [e for e in entidades if not (isinstance(e, Proveedor) and e.id_proveedor == id_entidad)]
+    elif clase_entidad == Cliente:
+        entidades = [e for e in entidades if not (isinstance(e, Cliente) and e.id_cliente == id_entidad)]
+    elif clase_entidad == Orden:
+        entidades = [e for e in entidades if not (isinstance(e, Orden) and e.id_orden == id_entidad)]
+    else:
+        print("Clase de entidad no válida.")
+        return
+
+    write_data_json(file_paths[clase_entidad.__name__.lower() + 's'], entidades)
+    print(f"{clase_entidad.__name__} eliminado exitosamente.")
 
 if __name__ == "__main__":
     menu_principal()

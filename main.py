@@ -5,10 +5,10 @@ from orden import Orden
 from utils import write_data_json, read_data_json
 
 file_paths = {
-    "productos": "productos.json",
-    "proveedores": "proveedores.json",
-    "clientes": "clientes.json",
-    "ordenes": "ordenes.json"
+    "productos": "data/productos.json",
+    "proveedores": "data/proveedores.json",
+    "clientes": "data/clientes.json",
+    "ordenes": "data/ordenes.json"
 }
 
 def menu_principal():

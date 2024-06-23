@@ -1,16 +1,16 @@
 class Cliente:
-    def __init__(self, id_cliente, nombre, telefono, email):
+    def __init__(self, id_cliente, nombre, direccion, telefono):
         self.id_cliente = id_cliente
         self.nombre = nombre
+        self.direccion = direccion
         self.telefono = telefono
-        self.email = email
 
     def to_dict(self):
         return {
             "id_cliente": self.id_cliente,
             "nombre": self.nombre,
-            "telefono": self.telefono,
-            "email": self.email
+            "direccion": self.direccion,
+            "telefono": self.telefono
         }
 
     @classmethod
@@ -18,6 +18,6 @@ class Cliente:
         return cls(
             dict_data["id_cliente"],
             dict_data["nombre"],
-            dict_data["telefono"],
-            dict_data["email"]
+            dict_data["direccion"],
+            dict_data["telefono"]
         )

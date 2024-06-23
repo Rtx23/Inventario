@@ -1,16 +1,16 @@
-class Proveedor: 
-    def __init__(self, id_proveedor, nombre, telefono, email):
+class Proveedor:
+    def __init__(self, id_proveedor, nombre, direccion, telefono):
         self.id_proveedor = id_proveedor
         self.nombre = nombre
+        self.direccion = direccion
         self.telefono = telefono
-        self.email = email
-    
+
     def to_dict(self):
         return {
             "id_proveedor": self.id_proveedor,
             "nombre": self.nombre,
-            "telefono": self.telefono,
-            "email": self.email
+            "direccion": self.direccion,
+            "telefono": self.telefono
         }
 
     @classmethod
@@ -18,6 +18,6 @@ class Proveedor:
         return cls(
             dict_data["id_proveedor"],
             dict_data["nombre"],
-            dict_data["telefono"],
-            dict_data["email"]
+            dict_data["direccion"],
+            dict_data["telefono"]
         )

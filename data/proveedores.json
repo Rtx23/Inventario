@@ -1,0 +1,20 @@
+[
+    {
+        "id_proveedor": 1,
+        "nombre": "Proveedor 1",
+        "telefono": "123456789",
+        "email": "proveedor1@example.com"
+    },
+    {
+        "id_proveedor": 2,
+        "nombre": "Proveedor 2",
+        "telefono": "987654321",
+        "email": "proveedor2@example.com"
+    },
+    {
+        "id_proveedor": 3,
+        "nombre": "Lucas",
+        "telefono": "984756312",
+        "email": "lucas@email.com"
+    }
+]

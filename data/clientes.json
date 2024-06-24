@@ -10,5 +10,11 @@
         "nombre": "Cliente 2",
         "direccion": "Avenida 2",
         "telefono": "444555666"
+    },
+    {
+        "id_cliente": 7668455,
+        "nombre": "Roy",
+        "direccion": "TanacnaArica110",
+        "telefono": "9654721354"
     }
 ]

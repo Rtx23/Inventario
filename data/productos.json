@@ -30,8 +30,15 @@
     {
         "id_producto": 7,
         "nombre": "Pan",
-        "descripcion": "Trigo",
-        "precio": 3.0,
-        "stock": 78
+        "descripcion": "Bagett",
+        "precio": 1.5,
+        "stock": 56
+    },
+    {
+        "id_producto": 12,
+        "nombre": "Galleta",
+        "descripcion": "Morocha",
+        "precio": 2.5,
+        "stock": 12
     }
 ]
